@@ -1,0 +1,14 @@
+# Игнорирование правила #
+*.iml
+*.idea
+
+# Игнорирование папки для автогенерируемых результатов сборки #
+/out/
+
+HM_Work_history_and_branches
+
+
+    public int statistik() {
+        int statistik = ((IntStream.of(sales).sum() - max() - min()) / (sales.length - 2));
+        return statistik;
+    }
