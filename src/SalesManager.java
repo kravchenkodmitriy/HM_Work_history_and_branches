@@ -1,3 +1,4 @@
+import java.util.stream.LongStream;
 
 public class SalesManager {
     protected long[] sales;
@@ -26,5 +27,10 @@ public class SalesManager {
         }
 
         return min;
+    }
+
+    public long statistik() {
+        long statistik = (LongStream.of(sales).sum() - max() - min()) / (sales.length - 2);
+        return statistik;
     }
 }
