@@ -1,3 +1,4 @@
+import java.util.stream.IntStream;
 
 public class SalesManager {
     protected int[] sales;
@@ -26,5 +27,10 @@ public class SalesManager {
         }
 
         return min;
+    }
+
+    public int statistik() {
+        int statistik = (IntStream.of(sales).sum() - max() - min()) / (sales.length - 2);
+        return statistik;
     }
 }
